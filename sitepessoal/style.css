@@ -1,0 +1,70 @@
+body {
+    background-color: #f0f0f0; 
+    color: #333; 
+}
+
+header {
+    background-color: #9c02bb; 
+    color: #fff; 
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+#hero {
+    background-color: #fff; 
+    text-align: center;
+    padding: 20px;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+#sobre {
+    background-color: #e0e0e0; 
+    padding: 20px;
+}
+
+#curiosidades {
+    background-color: #f5f5f5; 
+    padding: 20px;
+}
+
+#educacao {
+    background-color: #ddd; 
+    padding: 20px;
+}
+
+#causos {
+    background-color: #ccc; 
+    padding: 20px;
+}
+
+#habilidades {
+    background-color: #bbb; 
+    padding: 20px;
+}
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center;
+    padding: 20px;
+}
