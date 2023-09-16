@@ -1,138 +1,340 @@
-html, body {
+* {
   font-family: Helvetica;
-  font-size: 22px;
   color: seashell;
-  background-color: black;
+  background-color: black;   
   opacity: 0.9;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-
-/* Header */
-header {
-  background-color: black;
-  border-bottom: 1px solid seashell;
-  position: fixed;
-  width: 100%;
-  height: 69px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+html {
+  font-size: 22px;
 }
 
-.logo img {
+
+header {
+  width: 100%;
+  height: 69px;
+  border-bottom: 1px solid seashell;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  opacity: 1;
+}
+
+header a { 
+  margin: 10px;
+}
+
+header img {
   height: 50px;
   margin-left: 10px;
 }
-.lista {
-  margin-right: 10px;
-}
-
-.lista li {
-  text-decoration: underline;
-  display: inline-block;
-  margin: 5px;
-}
 
 
-/* Banner */
-.banner {
-  width: 1200px;
-  height: 700px;
-  background: url("resources/img-mission-background.webp") center center no-repeat;
-  background-size: cover;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+main {
   position: relative;
   top: 70px;
-  z-index: 2px;
-}
-
-.description {
-  background-color: black;
-  background-size: cover;
-  width: 1200px;
-}
-
-
-/* Main */
-.supporting {
-  position: relative;
-  top: 140px;
-  margin:0 auto;
-  width: 1000px;
-}
-
-.container {
-  margin-top: 30px;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.cardapio {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 66px;
 }
 
-.supporting h4 {
-  font-weight: bold;
-  line-height: 20px;
-  padding-top: 10px;
+
+#mission {
+  width: 90%;
+  max-height: 700px;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.container img {
-  height: 200px;
-  width: 300px;
-}
-
-/* Banner Two */
-.bannerTwo {
-  width: 1200px;
-  height: 500px;
-  background: url("resources/img-locations-background.jpg") center center no-repeat;
-  background-size: cover;
-  text-align: center;
-  display: inline-flex;
+  display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: 210px;
-  z-index: 2px;
+  flex: 1 1200px;
+  background-image: url("resources/img-mission-background.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#mission h2,
+#mission h4 {
+  width: 100%;
+  padding: 0.5%;
+}
+
+
+#featured_tea {
+  width: 75%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.container-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2%;    
+}
+
+.container-head h2 {
+  margin: 2% 0;
+}
+
+.figure-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+figure {
+  width: 300px;
+  height: 67%;
+  overflow: hidden;
+  margin: 1%;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  margin-top: 3.334%;
+}
+
+
+#locations {
+  width: 90%;
+  max-height: 500px;
+  max-width: 1200px;
+  padding-top: 5%;
+  margin-top: 5%;
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  align-items: center;
+  flex: 1 1200px;
+  background-image: url("resources/img-locations-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.locations-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.locations-title h2 {
+  background-color: transparent;
+}
+
+.locations-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: transparent;
+  flex-wrap: wrap;
+  opacity: 1; 
+}
+
+.adress{
+  margin: 20px;
+  display: flex;
+  flex-basis: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;       
+}
+
+.adress h3 {
+  padding: 5% 0;
+  width: 100%;
+}
+
+.adress p {
+  padding: 7.5% 0;
+  width: 100%;
+}
+
+#contact {
+  height: 200px;
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1000px;
+  display: flex;
   flex-direction: column;
 }
 
-.adress {
-  display: inline-flex;
+#contact h2 {
+  margin: 1% auto;
 }
 
-.locals {
-  background-color: black;
-  background-size: cover;
-  width: 300px;
-  margin: 15px 20px;
+#contact h5 {
+  margin: 2.9% auto;
 }
 
-
-/* Bottom */
-.bottom {
-  position: relative;
-  top: 200px;
-  margin:0 auto;
-  height: 200px;
-}
-
-
-/* Footer */
 footer {
-  /* position: relative;
-  top: 200px; I have to put this? why?? */
-  text-align: left;
-  margin-left: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+@media only screen and (max-width:1133px) {
+
+  #locations {
+      max-height: 700px;
+      padding-top: 70px;
+  }
+}
+
+@media only screen and (max-width:755px) {
+
+  main {
+      top: 107px;
+  }
+
+  header {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+  }
+
+  nav {
+      display: flex;
+      flex-direction: row;
+  }
+
+  header img {
+      height: 50px;
+      margin-top: 10px;
+  }
+
+  #mission {
+      width: 90%;
+      max-height: 500px;
+  }
+
+  #featured_tea {
+      width: 100%;
+      padding-top: 14.17%;
+  }
+
+  #locations {
+      width: 90%;
+      padding-top: 14.17%;
+      max-height: 1000px;
+  }
+
+  #contact {
+      height: 150px;
+  }
+
+  footer {
+      position: relative;
+      top: 40px;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  main {
+      top: 47px;
+      padding-bottom: 0;
+  }
+  
+  header img {
+      display: none;
+  }
+
+  #mission {
+      width: 95%;
+  }
+
+  #mission h4 {
+      font-size: 0.85rem;
+  }
+
+  #featured_tea {
+      padding-top: 46px;
+  }
+
+  #featured_tea h4 {
+      font-size: 0.95rem;
+  }
+
+  figure {
+      width: 95%;
+      margin: none;
+  }
+
+  #locations {
+      width: 95%;
+      max-height: 900px;
+      background-position: right;
+  }
+
+  .adress p {
+      padding: 5% 0;
+  }
+
+  footer {
+      padding: 3%;
+  }
+
+  footer p {
+      font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width:320px) {
+
+  main {
+      top: 109px;
+  }
+
+  nav {
+      flex-direction: column;
+  }
+  
+  header a{
+      margin: 5px;
+  }
+
+  #featured_tea {
+      padding-top: 110px;
+  }
+
+  #locations {
+      margin-top: 55px;
+      padding-top: 55px;
+  }
+
+  #locations h2 {
+      padding-bottom: 20px;
+  }
+
+  #contact h2 {
+      padding-top: 20px;
+  }
+
+  footer {
+      top: 109px;
+  }
 }
