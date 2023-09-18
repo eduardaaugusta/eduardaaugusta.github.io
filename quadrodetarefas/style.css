@@ -1,298 +1,190 @@
-/* Design Spec
+@font-face {
+	font-family: WorkSans;
+	src: url("https://content.codecademy.com/courses/learn-css-grid/project-ii/Resources/Work_Sans/WorkSans-Regular.ttf");
+}
+@font-face {
+	font-family: Poppins;
+	src: url("https://content.codecademy.com/courses/learn-css-grid/project-ii/Resources/Poppins/Poppins-Regular.ttf");
+}
 
-Tea Cozy
-In this project, you will create a fictional tea shop website on your own computer.
+html {
+  height: 100%;
+}
 
-We will provide a design spec and image assets to help you along the way. A design spec is an image of a web page outlined with all of its CSS properties and values. These are usually created by a designer as a source of instructions for a web developer. This project assumes that you will be able to reproduce the basic HTML and CSS with little guidance.
+body {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(359deg, #3023ae, #eb7f7b);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-The images and design spec you need to complete the project are listed below.
+.navbar {
+  display: grid;
+  grid-template-columns: 10px 1fr 3fr 1fr;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(120,70,154, 0.2);
+  text-align: center;
+  top: 0;
+  left: 0;
+  justify-content: space-around;
+}
 
-Images:
+.navbar h1 {
+  grid-column: 3 / 4;
+  font-family: Poppins;
+  color: #ffffff;
+  margin: 0;
+  align-self: center;
+}
 
-Logo [https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-tea-cozy-logo.png]
-Bedford Bizarre[https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-bedford-bizarre.jpg]
-Berry Blitz[https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-berryblitz.jpg]
-Donut[https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-donut.jpg]
-Locations[https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg]
-Background[https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-mission-background.jpg]
-Myrtle Ave[https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-myrtle-ave.jpg]
-Spiced Rum
-Design Spec:
+.container {
+	width: 1000px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
 
-Click here to access the design spec[https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-tea-cozy-redline.jpg].
-Good luck!
+.search-bar {
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255,255,255, 0.35);
+  top: 8px;
+  position: absolute;
+}
 
-*/
+input {
+	display: inline-block;
+	border: none;
+	background: transparent;
+	font-size: 14px;
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    color: seashell;
-    background-color: black;
-    opacity: 0.9;
-    font-weight: 500;
-    text-align: center;
-  }
-  
-  /*----------------------------------------------------------------
-    Container
-  */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /*----------------------------------------------------------------
-    Header Navigation bar
-  */
-  
-  header {
-    display: flex;
-    position: fixed;
-    height: 69px;
-    width: 100%;
-    border-bottom: 1px solid #fff5ee;
-    background-color: #000;
-    z-index: 99;
-    align-items: center;
-  }
-  
-  header > label,
-  input {
-    display: none;
-  }
-  
-  header .logo img {
-    height: 50px;
-    width: auto;
-    margin-left: 10px;
-  }
-  
-  header nav {
-    margin-left: auto;
-  }
-  
-  nav span {
-    margin-right: 10px;
-  }
-  
-  nav span a {
-    color: #eee;
-  }
-  
-  /*----------------------------------------------------------------
-    Mission
-  */
-  
-  #mission {
-    background-image: url('images/img-mission-background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 700px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  
-  #mission .content-wrapper {
-    margin: auto 0;
-    align-items: center;
-    background-color: #000;
-  }
-  
-  #mission h2 {
-    margin: 10px;
-  }
-  
-  #mission h4 {
-    margin: 10px;
-  }
-  
-  /*----------------------------------------------------------------
-    Featured Tea
-  */
-  .gallery-wrapper {
-    max-width: 1000px;
-  }
-  
-  #featured {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4em;
-  }
-  
-  #featured h2 {
-    margin-bottom: 0.5em;
-  }
-  
-  .img-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .img-item {
-    margin: 20px 15px;
-  }
-  
-  .img-item img {
-    height: 200px;
-    width: 300px;
-  }
-  
-  /*----------------------------------------------------------------
-    Location Section
-  */
-  
-  #locale {
-    display: flex;
-    flex-direction: column;
-    background-image: url('images/img-locations-background.jpg');
-    height: 600px;
-    width: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  #locale > h2 {
-    top: 0;
-    color: #999;
-    width: 100%;
-    margin-top: 3em;
-    margin-bottom: 15px;
-  }
-  
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    /*fix 1*/
-    max-width: 100%;
-  }
-  
-  .localeitem {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: auto 40px;
-    width: 300px;
-    height: 250px;
-    background: #000;
-    opacity: 1;
-    margin: 15px;
-  }
-  
-  .localeitem h3 {
-    margin: 20px;
-  }
-  .localeitem h5 {
-    margin: 15px;
-  }
-  
-  /*----------------------------------------------------------------
-    Contact Section
-  */
-  
-  #contact {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-  }
-  
-  #contact > h2 {
-    margin-top: 10px;
-    margin-bottom: 1.4em;
-  }
-  
-  #contact > h5 {
-    margin-bottom: 1.2em;
-  }
-  
-  /*----------------------------------------------------------------
-    footer
-  */
-  
-  footer {
-    text-align: left;
-    margin-left: 20px;
-  }
-  
-  /* ---------------------------------------------------------------
-    Media Queries
-   */
-  
-  @media screen and (max-width: 1140px) {
-    /*Header and navigation*/
-    header {
-      display: block;
-    }
-  
-    header > .logo {
-      position: relative;
-      top: 10px;
-    }
-    header > label {
-      display: inline-block;
-      cursor: pointer;
-      /*fix 2*/
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin-left: 1rem;
-      margin-right: 1rem;
-      margin-top: 1.2rem;
-    }
-    header nav {
-      margin: 0;
-    }
-  
-    header #toggle:not(:checked) + nav > span {
-      display: none;
-    }
-  
-    header #toggle:checked + nav > span {
-      display: block;
-      background: #000;
-      margin: 0;
-    }
-  
-    /*location*/
-    #locale {
-      margin: 0 auto;
-      width: 100%;
-      /*fix 3*/
-      min-height: 100vh;
-      /*3*/
-      border: 1px solid lighten(black, 10);
-      display: flex;
-      align-items: center;
-    }
-  
-    #locale .flex-container {
-      display: flex;
-      height: auto;
-      color: #fff;
-      /* fix 4    overflow: hidden;
-   */
-    }
-    #locale .flex-container .localeitem {
-      /* fix 5    position: relative;
-      overflow: hidden;
-      height: 100%; */
-      width: 40rem;
-      flex-grow: 1;
-      flex-basis: 0;
-  
-      background: #000;
-    }
-  }
+.search-bar input {
+	float: left;
+	height: 18px;
+  margin-top: 9px;
+  margin-left: 7px;	
+}
+
+.card-column input {
+	height: 18px;
+  margin-left: 15px;		
+}
+
+.search-icon {
+	float: left;	
+  margin-top: 9px;
+  margin-left: 7px;
+}
+
+.card-column {
+	background-color: #ffffff;
+	gap: 10px;
+	min-height: 700px;
+	display: grid;
+	grid-template-rows: 20px repeat(5, 100px);
+	align-content: space-around;
+	grid-auto-rows: 100px;
+}
+
+.card-column h2 {
+	padding: 0;
+  margin: 0 auto;
+  font-family: WorkSans;
+  font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	text-align: left;
+	color: #2f2f2f;
+	display: inline-block;
+}
+
+.taskgroup-heading {
+	margin-left: 15px;
+	margin-top: 7px;
+}
+
+.site-body {
+	position: absolute;
+	top: 100px;
+	margin-left: 50px;
+}
+
+.card {
+	margin-right: 15px;
+	margin-left: 15px;
+	background-color: rgba(216, 216, 216, 0.21);
+	border: solid 1px rgba(151,151,151,0.21);
+	position: relative;
+}
+
+.rectangle {
+  width: 57px;
+  height: 6px;
+  position: relative;
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.list-icon {
+	display: inline-block;
+	margin-left: 7px;
+	margin-bottom: 5px;
+	position: absolute;
+	bottom: 0;
+}
+
+.task-description {
+	margin-left: 7px;
+	margin-top: 0;
+	font-family: WorkSans;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	text-align: left;
+	color: #2f2f2f;
+}
+
+.ellipsis-icon {
+	display: inline-block;
+	float: right;
+  margin-right: 15px;
+}
+
+.task-date {
+	display: inline-block;
+	font-family: WorkSans;
+	font-size: 10px;
+	letter-spacing: 0.1px;
+	text-align: left;
+	color: #9b9b9b;
+	position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+  left: 25px;
+}
+
+.yellow {
+	background-color: #fdcb1e;
+}
+
+.orange {
+	background-color: #ff7700;
+}
+
+.green {
+	background-color: #50e3c2;
+}
+
+.blue {
+	background-color: #3343e5;
+}
+
+.add-card {
+	background-color: rgba(216, 216, 216, 0.21);
+  border: solid 1px rgba(151,151,151,0.21);
+  color: #2f2f2f;
+}
