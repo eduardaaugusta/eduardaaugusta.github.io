@@ -1,0 +1,79 @@
+/* Reset CSS para remover margens e preenchimentos padrão */
+body, h1, h2, p, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Estilo para o cabeçalho */
+  header {
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para a seção Hero */
+  .hero {
+    background-image: url('foto/profwagner.jpeg.jpeg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 0;
+  }
+  
+  .hero h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para o texto introdutório */
+  .intro {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo para seções subsequentes */
+  section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo para o rodapé */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Estilo para links */
+  a {
+    color: #007acc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  
