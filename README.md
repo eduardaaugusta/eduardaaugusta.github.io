@@ -6,3 +6,4 @@ Web Sites 1°BIM
 <br> <a href="https://eduardaaugusta.github.io/festivaldevinho/index.html">Agenda Festival de Vinho</a>
 <br> <a href="https://eduardaaugusta.github.io/blogdacidadedenovayork/index.html">Blog da Cidade de Nova York</a>
 <br> <a href="https://eduardaaugusta.github.io/chaaconchegante/index.html">Chá Aconchegante</a>
+<br> <a href="https://eduardaaugusta.github.io/quadrodetarefas/index.html">Quadro de tarefas</a>
